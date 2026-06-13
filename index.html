@@ -13,13 +13,14 @@
     font-family: 'Inter', sans-serif;
     background: #f4f4f0;
     color: #1a1a2e;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.7;
   }
 
   /* ── PAGE WRAPPER ── */
   .page {
-    width: 794px;
+    width: 100%;
+    max-width: 960px;
     margin: 0 auto 40px;
     background: #ffffff;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
@@ -28,7 +29,7 @@
   /* ── COVER PAGE ── */
   .cover {
     background: #0a0b18;
-    min-height: 1123px;
+    min-height: 100vh;
     position: relative;
     overflow: hidden;
   }
@@ -80,7 +81,7 @@
   .cover-inner {
     position: relative;
     z-index: 2;
-    height: 1123px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 52px 64px;
@@ -200,7 +201,7 @@
 
   /* ── INTERIOR PAGES ── */
   .interior {
-    min-height: 1123px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
@@ -724,50 +725,30 @@
   </style>
 </head>
 <body>
-<!-- Proposal nav bar — download PDF + branding -->
-<div id="proposal-bar" style="
+<!-- Floating PDF download button — bottom right -->
+<a href="zenex_proposal.pdf" download="Veritech_Digital_Zenex_Proposal_2026.pdf" id="pdf-fab" style="
   position: fixed;
-  top: 0; left: 0; right: 0;
+  bottom: 32px;
+  right: 32px;
   z-index: 9999;
-  background: #0d0f1e;
-  border-bottom: 1px solid rgba(107,99,232,0.3);
-  padding: 10px 32px;
+  background: #6b63e8;
+  color: white;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 14px 22px;
+  border-radius: 50px;
+  text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.4);
-">
-  <div style="display:flex;align-items:center;gap:12px;">
-    <div style="width:32px;height:32px;background:#6b63e8;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:white;letter-spacing:0.5px;">VT</div>
-    <div>
-      <div style="font-size:13px;font-weight:700;color:white;letter-spacing:0.3px;">Veritech Digital</div>
-      <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:1px;">Proposal — Zenex Foundation Website Redesign 2026</div>
-    </div>
-  </div>
-  <div style="display:flex;align-items:center;gap:12px;">
-    <div style="font-size:10px;color:rgba(255,255,255,0.35);">CONFIDENTIAL</div>
-    <a href="zenex_proposal.pdf" download="Veritech_Digital_Zenex_Proposal_2026.pdf" style="
-      background: #6b63e8;
-      color: white;
-      font-size: 11px;
-      font-weight: 600;
-      padding: 7px 16px;
-      border-radius: 6px;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      letter-spacing: 0.3px;
-      transition: background 0.2s;
-    " onmouseover="this.style.background='#5a52d5'" onmouseout="this.style.background='#6b63e8'">
-      ↓ Download PDF
-    </a>
-  </div>
-</div>
-
-<!-- Push page content down so fixed bar doesn't overlap -->
-<div style="height: 53px;"></div>
+  gap: 8px;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 24px rgba(107,99,232,0.45);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+" onmouseover="this.style.background='#5a52d5';this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 32px rgba(107,99,232,0.55)'" onmouseout="this.style.background='#6b63e8';this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(107,99,232,0.45)'">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+  Download PDF
+</a>
 
 
 
@@ -1052,7 +1033,7 @@
       <div class="section-title">Veritech Digital</div>
       <div class="section-divider"></div>
       <p class="section-intro">Veritech Digital is a Johannesburg-based digital agency specialising in web development, UX design, and performance measurement. We work with purpose-driven organisations — foundations, NGOs, and institutions — that need their digital presence to match the quality of their work. We build websites that don't just look credible; they make content discoverable, audiences engaged, and impact measurable.</p>
-      <p style="font-size:13.5px; color:#444455; margin-bottom:32px; line-height:1.7;">We are a lean, senior-led team. Every project is owned and delivered by the same specialists from discovery to launch — no account managers in the middle, no handoffs to juniors. What you see in this proposal is exactly who builds your site.</p>
+      <p style="font-size:13.5px; color:#444455; margin-bottom:32px; line-height:1.7;">We are a lean, senior-led team. Every project is owned and delivered by the same senior specialists from discovery to launch — no account managers in the middle, no handoffs to juniors. The leads you see in this proposal are the people who build your site.</p>
 
       <div class="section-label" style="margin-top:8px;">Our team</div>
       <div style="width:40px;height:3px;background:#6b63e8;border-radius:2px;margin:8px 0 24px;"></div>
@@ -1061,9 +1042,12 @@
           <div class="team-avatar">AS</div>
           <div class="team-name">Ashlin Sami</div>
           <div class="team-role">Founder &amp; Lead — Web Development, UX &amp; Strategy</div>
-          <div class="team-bio">Ashlin leads all web development, UX design, information architecture, and project delivery at Veritech Digital. With a Bachelor of Information Technology in Business Information Systems and over a decade of experience across agency and freelance environments, Ashlin brings full-stack capability to every engagement — from discovery and wireframing through to WordPress development, security implementation, and CMS training.</div>
+          <div class="team-bio">Ashlin leads all web development, UX design, information architecture, and project delivery at Veritech Digital. With a Bachelor of Information Technology in Business Information Systems and over a decade of experience across agency and freelance environments, Ashlin brings full-stack capability to every engagement — from discovery and wireframing through to WordPress and Shopify development, custom plugin builds, AI automations, security implementation, and CMS training.</div>
           <div class="skill-tags">
             <span class="skill-tag">WordPress</span>
+            <span class="skill-tag">Shopify</span>
+            <span class="skill-tag">Custom WP Plugins</span>
+            <span class="skill-tag">AI Automations</span>
             <span class="skill-tag">UX &amp; IA</span>
             <span class="skill-tag">UI Design</span>
             <span class="skill-tag">PHP</span>
@@ -1077,13 +1061,14 @@
           <div class="team-avatar">TM</div>
           <div class="team-name">Tumelo Mabena</div>
           <div class="team-role">Data Specialist — GA4 &amp; Performance Measurement</div>
-          <div class="team-bio">Tumelo leads all analytics implementation and performance measurement at Veritech Digital. Specialising in GA4 configuration, event tracking, and data visualisation, Tumelo ensures that every site we build is equipped to generate clean, actionable insight — giving clients a clear view of how their audiences engage with their content.</div>
+          <div class="team-bio">Tumelo leads all analytics implementation and measurement strategy at Veritech Digital. Specialising in GA4 configuration, event tracking, and data visualisation, he ensures every site we build is equipped to generate clean, actionable insight — giving clients a clear view of how their audiences engage. Backed by an internationally obtained BEng in Computer Science (SAQA NQF 8) and over 5 years across agency and freelance environments.</div>
           <div class="skill-tags">
             <span class="skill-tag">GA4</span>
             <span class="skill-tag">Event Tracking</span>
             <span class="skill-tag">Analytics Dashboards</span>
             <span class="skill-tag">Performance Reporting</span>
             <span class="skill-tag">Data Visualisation</span>
+            <span class="skill-tag">BEng Computer Science (SAQA NQF 8)</span>
           </div>
         </div>
       </div>
@@ -3500,7 +3485,7 @@
           <ul style="margin:0;padding-left:16px;display:flex;flex-direction:column;gap:7px;">
             <li style="font-size:12px;color:#333;line-height:1.5;">17-week delivery plan from appointment to launch — comfortably within the November 2026 deadline with buffer built in</li>
             <li style="font-size:12px;color:#333;line-height:1.5;">Four formal approval gates built into the timeline — Zenex retains full visibility and sign-off authority at every stage</li>
-            <li style="font-size:12px;color:#333;line-height:1.5;">Dedicated team of two for the full engagement — no resource switching, no competing priorities mid-project</li>
+            <li style="font-size:12px;color:#333;line-height:1.5;">Senior-led delivery team with dedicated leads across UX, development, and analytics — no resource switching, no competing priorities mid-project</li>
             <li style="font-size:12px;color:#333;line-height:1.5;">Post-launch retainer available at R12,000/month — ensuring continuity and ongoing optimisation beyond delivery</li>
           </ul>
         </div>
